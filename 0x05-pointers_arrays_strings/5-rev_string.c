@@ -15,7 +15,7 @@ void rev_string(char *n)
 	while (*t)
 		++t;
 
-	while (s < --t)
+	while (n < --t)
 	{
 	*n ^= *t;
 	*t ^= *n;
