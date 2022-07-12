@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _stropy - copy a string (including the terminating null-byte)
+ * _strcpy - copy a string (including the terminating null-byte)
  *
  * @dest: the buffer to which the string should be copied
  * @src: the string to copy
  *
  * Return: dest
  */
-char *_stropy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int len = 0;
 	int pos = 0;
