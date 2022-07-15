@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * leet -> a leet function
- * @x: param x
- * Return: a string
+ * leet -> encodes a string into 1337
+ * @x: string to encode
+ *
+ * Return: address of x
  */
 char *leet(char *x)
 {
 	int i, j;
-	char a[] = "aAeEo0tT1L";
+	char a[] = "aAeEoOtT1L";
 	char b[] = "4433007711";
 
 	for (i = 0; *(x + i); i++)
