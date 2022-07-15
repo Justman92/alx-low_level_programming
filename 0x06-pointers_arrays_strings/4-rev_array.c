@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * reverse_array -> revserve the content of an array
