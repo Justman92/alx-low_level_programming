@@ -15,9 +15,9 @@ char *leet(char *x)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			if (a[j] == *(s + i))
-				*(s + i) = b[j];
+			if (a[j] == *(x + i))
+				*(x + i) = b[j];
 		}
 	}
-	return (s);
+	return (x);
 }
