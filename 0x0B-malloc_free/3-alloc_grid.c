@@ -17,24 +17,24 @@ int **alloc_grid(int width, int height)
 	int **a;
 
 	/* if width or height is 0 or negative, return NULL */
-	if (width <= 0 || height <= 0)
+	if (width == 0 || height == 0)
 		return (NULL);
 	/* create an array of pointers */
 	a = (int **)malloc(sizeof(int *) * height);
 	if (a == NULL)
 		return (NULL);
-	for (i = 0; i < height; i++)
+	for (i = 0; i < height; ++i)
 	{
-		a[i] = (int *)malloc(sizeof(int) * width);
+		a[i] = malloc(width * sizeof(int));
 		if (a[i] == NULL)
 		{
-			for (j = 0; j < i; j++)
-				free(a[j]);
+			for (i = 0; i >= 0; i--)
+				free(a[i]);
 			free(a);
 			return (NULL);
 		}
 		/* initialize all values in the array to 0 */
-		for (i = 0; i < height; i++)
+		for (i = 0; i < height; ++i)
 		{
 			for (j = 0; j < width; j++)
 			a[i][j] = 0;
