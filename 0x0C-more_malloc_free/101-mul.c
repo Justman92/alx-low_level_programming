@@ -177,6 +177,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 	if (tens)
 		*final_prod = (tens % 10) + '0';
 }
+
 /**
  * main - Multiplies two positive numbers.
  * @argv: The number of arguments passed to the program.
