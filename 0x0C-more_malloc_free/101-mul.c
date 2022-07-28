@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.hi"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -20,6 +20,7 @@ int find_len(char *str)
 
 	while (*str++)
 		len++;
+
 	return (len);
 }
 
@@ -27,6 +28,7 @@ int find_len(char *str)
  * create_xarray - Creates an array of chars and initializes it with
  * the character 'x'. Adds a terminating null byte.
  * @size: The size of the array to be initialized.
+ *
  * Description: If there is insufficient space, the
  * function exits with a status of 98.
  * Return: A pointer to the array.
@@ -45,6 +47,7 @@ char *create_xarray(int size)
 		array[index] = 'x';
 
 	array[index] = '\0';
+
 	return (array);
 }
 
@@ -59,12 +62,14 @@ char *iterate_zeroes(char *str)
 {
 	while (*str && *str == '0')
 		str++;
+
 	return (str);
 }
 
 /**
  * get_digit - Converts a digit character to a corresponding int.
  * @c: The character to be converted.
+ *
  * Description: If c is a non-digit, the function
  * exits with a status of 98.
  * Return: The converted int.
@@ -78,6 +83,7 @@ int get_digit(char c)
 		printf("Error\n");
 		exit(98);
 	}
+
 	return (digit);
 }
 
@@ -103,6 +109,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 		*prod = 'x';
 		prod++;
 	}
+
 	prod--;
 
 	while (zeroes--)
@@ -118,11 +125,13 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 			printf("Error\n");
 			exit(98);
 		}
+
 		num = (*mult - '0') * digit;
 		num += tens;
 		*prod = (num % 10) + '0';
 		tens = num / 10;
 	}
+
 	if (tens)
 		*prod = (tens % 10) + '0';
 }
@@ -185,7 +194,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-			exit(98);
+		exit(98);
 	}
 
 	if (*(argv[1]) == '0')
