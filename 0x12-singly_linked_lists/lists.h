@@ -2,11 +2,9 @@
 #define LISTS_H
 
 /*
- * File: lists.h
- * Auth: Idi Wakasso
- * Desc: Header file containing prototypes and definitions for all functions
- *       and types written in the 0x12-singly_linked_lists directory.
- */
+* Desc: header file containinf prototypes and definitions
+*	for all functions and types written in this proj
+*/
 
 #include <stdlib.h>
 
@@ -17,7 +15,7 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- *              for ALX project
+ *              for Holberton project
  */
 typedef struct list_s
 {
